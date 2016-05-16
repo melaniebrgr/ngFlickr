@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="flickrApp">
+<html lang="en" ng-app="ngFlickr">
 <head>
 	<meta charset="UTF-8">
 	<title>ngFlickr</title>
 	<link rel="stylesheet" href="styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.5.5/angular-messages.min.js"></script>
 	<script src="app.js"></script>
 </head>
 <body>
 	<h1>Flickr Searchr</h1>
 	<form name="searchform">
-		<input type="text" name="tag" placeholder="Enter a tag to search for" maxlength="100" ng-model="data.tag" />
+		<input type="text" name="tag" placeholder="Enter a tag to search for" ng-maxlength="100" required ng-model="data.tag"/>
 		<button type="submit">Submit</button>
+		<div class="error" ng-messages="searchform.tag.$error" ng-if="searchform.tag.$dirty">
+			<div ng-message="required">You must provide a tag</div>
+			<div ng-message="maxlength">The video tag cannot be longer than 100 characters</div>
+		</div>
 	</form>
 </body>
 </html>
