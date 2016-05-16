@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="flickrApp">
+<head>
+	<meta charset="UTF-8">
+	<title>ngFlickr</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+	<h1>Flickr Searchr</h1>
+	<form name="searchform">
+		<input type="text" name="tag" placeholder="Enter a tag to search for" maxlength="100" ng-model="data.tag" />
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
