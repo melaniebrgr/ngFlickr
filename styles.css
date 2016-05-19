@@ -6,6 +6,6 @@ html {
 	box-sizing: inherit;
 }
 
-h1, form {
+h1, form, p {
 	text-align: center;
 }
