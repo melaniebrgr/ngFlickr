@@ -16,10 +16,10 @@
 		<form name="searchform" ng-submit="getFlickrData()">
 			<input type="text" name="tag" placeholder="Enter a tag to search for" ng-maxlength="100" required ng-model="model.tag"/>
 			<button type="submit">Submit</button>
-	<!-- 		<div class="error" ng-messages="searchform.tag.$error" ng-if="searchform.tag.$dirty">
+			<div class="error" ng-messages="searchform.tag.$error" ng-if="searchform.tag.$dirty">
 				<div ng-message="required">You must provide a tag</div>
 				<div ng-message="maxlength">The video tag cannot be longer than 100 characters</div>
-			</div> -->
+			</div>
 		</form>
 
 		<p ng-show="model.message">{{ model.message }}</p>

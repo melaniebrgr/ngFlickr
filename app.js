@@ -32,9 +32,10 @@ angular.module('ngFlickr', ['ngMessages'])
 				}
 				eval(data.data);
 				$scope.model.message = 'We found '+$scope.model.numResults+' results for '+$scope.model.tag+'.';
-				$scope.model.tag = '';
+				document.getElementsByName('tag')[0].value = '';
 			}, function(data, status, headers, config) {
 				console.log('Failure :(');
+				$scope.model.message = 'We experienced an error calling the FLickr API. Sorry. :(';
 			});
 		};
 
